@@ -3258,7 +3258,7 @@ disabSkill[SKILL_FIREICE] = true;
 	});
 
 
-	dispatch.hook('S_PLAYER_STAT_UPDATE', 17, (event) => {
+	dispatch.hook('S_PLAYER_STAT_UPDATE', 14, (event) => {
 		if (!enabled) return;
 		aspd = (event.attackSpeed + event.attackSpeedBonus) /100;
 		if (event.hp ==0) {
