@@ -571,7 +571,7 @@ module.exports = function sorc(dispatch) {
 	var atkArr;
 
 	let talentState = [];
-	dispatch.hook('S_LOAD_EP_INFO', 3, (event) => {
+	dispatch.hook('S_LOAD_EP_INFO', 2, (event) => {
 		if (!enabled) { return };
 		talentState = [];
 		event.perks.forEach(function (element) {
@@ -985,7 +985,7 @@ module.exports = function sorc(dispatch) {
 		
 	});
 
-	dispatch.hook('S_EACH_SKILL_RESULT', 15, (event) => {
+	dispatch.hook('S_EACH_SKILL_RESULT', 14, (event) => {
 		if(event.target === cid) {
 			if (event.reaction.enable == true) {
 				disabSkill[SKILL_TELEPORT_JAUNT] = false;
@@ -1041,7 +1041,7 @@ module.exports = function sorc(dispatch) {
 		}*/
 	});
 
-	dispatch.hook('S_ABNORMALITY_BEGIN', 5, (event) => {
+	dispatch.hook('S_ABNORMALITY_BEGIN', 4, (event) => {
 		if (!enabled) return;
 		if (event.target !== cid) {
 			return;
